@@ -116,6 +116,10 @@ SELECT COUNT(*) as course3_enrollment FROM Learners Where SelectedCourses = 3
 
 -- 5. Display the number of enroll learners in the month of august
 SELECT COUNT(*) as august_enrollments FROM Learners Where LearnerEnrollmentDate LIKE '%-08-%'
+
+-- Count the number of enroll learners in the month of august-05
+SELECT COUNT(*) as august_five_enrollments FROM Learners Where LearnerEnrollmentDate LIKE '%-08-05%'
+
 SELECT COUNT(*) as august_5_enrollments FROM Learners WHERE DATE(LearnerEnrollmentDate) = '2024-08-05';
 SELECT * FROM Learners WHERE DATE(LearnerEnrollmentDate) = '2024-08-05';
 
