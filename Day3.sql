@@ -56,8 +56,10 @@ GROUP BY SourceOfJoining
 HAVING num_of_students>1
 
 -- same course k liye number of sources left column course, right column no.of.source
+UPDATE learners SET SourceOfJoining = "LinkedIn" Where Learner_Id = 5;
 
-SELECT SelectedCourses AS course,COUNT(DISTINCT SourceOfJoining) AS num_of_sources
+select * from learners
+SELECT SelectedCourses AS course,COUNT(Distinct SourceOfJoining) AS num_of_sources
 FROM learners
 GROUP BY SelectedCourses;
 

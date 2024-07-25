@@ -101,7 +101,7 @@ SELECT * FROM employee WHERE Salary = (SELECT MAX(Salary) FROM employee)
 
 -- 1. Give me the record of the employee getting highest salary
 
--- SELECT* FROM employee ORDER BY Salary LIMIT 1 -- for lowest salary
+-- SELECT* FROM employee ORDER--  BY Salary LIMIT 1 -- for lowest salary
 SELECT* FROM employee ORDER BY Salary DESC LIMIT 1 -- for highest salary
 
 -- 2. Give me the record of the employee getting highest salary, age>27
@@ -131,3 +131,5 @@ select * from Learners
 -- 7. Count the number of different/unique/distinct companies that enrolled student working in 
 SELECT COUNT(Distinct LearnerCompany) as Total_companies FROM Learners 
 SELECT (LearnerCompany) FROM Learners 
+
+SELECT COUNT(LearnerCompany) as students FROM Learners
