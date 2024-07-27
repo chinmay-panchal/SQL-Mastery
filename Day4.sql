@@ -14,7 +14,7 @@ SELECT LearnerFirstName, LearnerLastName, Learners.Location, TOTAL, Avg_Exp
 FROM Learners
 JOIN
 (SELECT Location, COUNT(Location) as TOTAL, AVG(YearsOfExperience) as Avg_EXP
-FROM learners 
+FROM learners
 GROUP BY Location) AS TEMP
 ON Learners.Location = TEMP.Location
 
